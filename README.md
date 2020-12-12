@@ -6,7 +6,7 @@ ros kinetic and gazebo 7
 package : [ardrone_autonomy](https://github.com/AutonomyLab/ardrone_autonomy), [tum_simulator kinetic rework](https://github.com/angelsantamaria/tum_simulator),
 [custom package](https://github.com/felixcapuano/ardrone-facetracker)
 
-This docker is inspired by https://github.com/SoftArch/racecar-
+This docker is inspired by https://github.com/SoftArch/racecar-gazebo
 
 ## Installation
 Simply run :
