@@ -33,11 +33,13 @@ docker-compose down
 ```
 
 ## Usage
+
+First open new command prompt and run the ros core :
 ```bash
 roscore
 ```
 
-To emulate the ardrone you can launch the gazebo simulation using :
+To emulate the ardrone you can launch the gazebo simulation using in a command prompt:
 ```bash
 roslaunch cvg_sim_gazebo ardrone_testworld.launch
 ```
