@@ -8,6 +8,10 @@ package : [ardrone_autonomy](https://github.com/AutonomyLab/ardrone_autonomy), [
 
 This docker is inspired by https://github.com/SoftArch/racecar-gazebo
 
+# Requirement
+
+Make sure [docker](https://docs.docker.com/get-docker/) is installed and is running.
+
 ## Installation
 Simply run :
 ```bash
@@ -22,11 +26,26 @@ http://localhost:6080/
 
 
 To stop the docker:
-```bash*
+```bash
 # use : Ctrl + C
 # then
 docker-compose down
 ```
+
+## Usage
+```bash
+roscore
+```
+
+To emulate the ardrone you can launch the gazebo simulation using :
+```bash
+roslaunch cvg_sim_gazebo ardrone_testworld.launch
+```
+
+To pilote the drone you can use this documentation frome ardrone autonomy:
+
+- https://ardrone-autonomy.readthedocs.io/en/latest/reading.html
+- https://ardrone-autonomy.readthedocs.io/en/latest/commands.html
 
 # By
 felix
