@@ -34,5 +34,11 @@ RUN /bin/bash -c "echo 'source /opt/ros/kinetic/setup.bash' >> /root/.bashrc && 
 
 # -- Installing custom package here --
 
+# Installing Vim Editor
+RUN apt update && apt install -y vim
+# Clone project repository
+RUN cd src && git clone https://github.com/felixcapuano/ardrone-facetracker.git
+RUN chmod 777 src/ardrone-facetracker/scripts/*
+
 # ------------------------------------
 RUN /bin/bash -c '. /opt/ros/kinetic/setup.bash; cd ${CATKIN_WS}; catkin_make'
