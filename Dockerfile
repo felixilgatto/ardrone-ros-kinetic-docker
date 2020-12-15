@@ -23,9 +23,6 @@ RUN apt-get install -y ros-kinetic-ros-controllers
 RUN apt update && apt-get install -y ros-kinetic-hector-*
 RUN apt update && apt-get install -y ros-kinetic-ardrone-autonomy
 
-# Installing Vim Editor
-RUN apt update && apt install -y vim
-
 RUN sudo apt-get update && sudo apt-get -y upgrade
 
 WORKDIR ${CATKIN_WS}
@@ -35,9 +32,7 @@ RUN /bin/bash -c "echo 'source /opt/ros/kinetic/setup.bash' >> /root/.bashrc && 
 					echo 'source ${CATKIN_WS}/devel/setup.bash' >> /root/.bashrc && \
 					source /root/.bashrc"
 
-# Installing custom package
-RUN cd src && git clone https://github.com/angelsantamaria/tum_simulator
-RUN cd src && git clone https://github.com/felixcapuano/ardrone-facetracker.git
-RUN chmod 777 src/ardrone-facetracker/scripts/*
+# -- Installing custom package here --
 
+# ------------------------------------
 RUN /bin/bash -c '. /opt/ros/kinetic/setup.bash; cd ${CATKIN_WS}; catkin_make'
