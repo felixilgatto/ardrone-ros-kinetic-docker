@@ -37,7 +37,7 @@ RUN /bin/bash -c "echo 'source /opt/ros/kinetic/setup.bash' >> /root/.bashrc && 
 # Installing Vim Editor
 RUN apt update && apt install -y vim
 # Clone project repository
-RUN cd src && git clone https://github.com/felixcapuano/ardrone-facetracker.git
+RUN cd src && git clone --branch facetracker https://github.com/felixcapuano/ardrone-facetracker.git
 RUN chmod 777 src/ardrone-facetracker/scripts/*
 
 # ------------------------------------
