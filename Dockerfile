@@ -23,8 +23,6 @@ RUN apt-get install -y ros-kinetic-ros-controllers
 RUN apt update && apt-get install -y ros-kinetic-hector-*
 RUN apt update && apt-get install -y ros-kinetic-ardrone-autonomy
 
-RUN sudo apt-get update && sudo apt-get -y upgrade
-
 WORKDIR ${CATKIN_WS}
 RUN mkdir -p src
 
@@ -41,4 +39,5 @@ RUN cd src && git clone --branch facetracker https://github.com/felixcapuano/ard
 RUN chmod 777 src/ardrone-facetracker/scripts/*
 
 # ------------------------------------
+RUN sudo apt-get update && sudo apt-get -y upgrade
 RUN /bin/bash -c '. /opt/ros/kinetic/setup.bash; cd ${CATKIN_WS}; catkin_make'
