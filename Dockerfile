@@ -36,7 +36,7 @@ RUN /bin/bash -c "echo 'source /opt/ros/kinetic/setup.bash' >> /root/.bashrc && 
 					source /root/.bashrc"
 
 # Installing custom package
-RUN cd src && git clone https://github.com/angelsantamaria/tum_simulator
+RUN cd src && git clone https://github.com/felixcapuano/tum_simulator.git
 RUN cd src && git clone https://github.com/felixcapuano/ardrone-facetracker.git
 RUN chmod 777 src/ardrone-facetracker/scripts/*
 
