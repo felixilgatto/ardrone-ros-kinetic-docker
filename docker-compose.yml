@@ -1,7 +1,7 @@
 version: "3"
 services:
   dockerardrone:
-    image: docker-ardrone
+    image: dorowu/ubuntu-desktop-lxde-vnc:xenial
     ports:
       - "6080:80"
   
