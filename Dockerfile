@@ -40,3 +40,4 @@ RUN chmod 777 src/ardrone-facetracker/scripts/*
 
 RUN sudo apt-get update && sudo apt-get -y upgrade
 RUN /bin/bash -c '. /opt/ros/kinetic/setup.bash; cd ${CATKIN_WS}; catkin_make'
+COPY ./models/* /root/.gazebo/models/
