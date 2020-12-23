@@ -20,8 +20,9 @@ RUN apt-get update && apt-get install -y gazebo7 libignition-math2-dev
 
 RUN apt-get install -y ros-kinetic-gazebo-ros-control 
 RUN apt-get install -y ros-kinetic-ros-controllers
-RUN apt update && apt-get install -y ros-kinetic-hector-*
-RUN apt update && apt-get install -y ros-kinetic-ardrone-autonomy
+RUN apt-get update && apt-get install -y ros-kinetic-hector-*
+RUN apt-get update && apt-get install -y ros-kinetic-ardrone-autonomy
+RUN apt-get update && apt-get install -y python-pip
 
 WORKDIR ${CATKIN_WS}
 RUN mkdir -p src
@@ -38,6 +39,7 @@ RUN cd src && git clone https://github.com/felixcapuano/tum_simulator.git
 RUN cd src && git clone https://github.com/felixcapuano/ardrone-facetracker.git
 RUN chmod 777 src/ardrone-facetracker/scripts/*
 
+###
 RUN sudo apt-get update && sudo apt-get -y upgrade
 RUN /bin/bash -c '. /opt/ros/kinetic/setup.bash; cd ${CATKIN_WS}; catkin_make'
 
