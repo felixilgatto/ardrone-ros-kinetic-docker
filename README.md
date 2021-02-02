@@ -15,9 +15,11 @@ Make sure [docker](https://docs.docker.com/get-docker/) is installed and is runn
 ## Installation
 Simply run :
 ```bash
-git clone https://github.com/felixcapuano/ardrone-ros-kinetic-docker
-cd ./ardrone-ros-kinetic-docker
-docker-compose up
+$ git clone https://github.com/felixcapuano/ardrone-ros-kinetic-docker
+$ cd ./ardrone-ros-kinetic-docker
+$ docker pull dorowu/ubuntu-desktop-lxde-vnc:xenial
+$ docker build .
+$ docker-compose up
 ```
 
 Tadam !!!
@@ -29,19 +31,19 @@ To stop the docker:
 ```bash
 # use : Ctrl + C
 # then
-docker-compose down
+$ docker-compose down
 ```
 
 ## Usage
 
 First open new command prompt and run the ros core :
 ```bash
-roscore
+$ roscore
 ```
 
 To emulate the ardrone you can launch the gazebo simulation using in a command prompt:
 ```bash
-roslaunch cvg_sim_gazebo ardrone_testworld.launch
+$ roslaunch cvg_sim_gazebo ardrone_testworld.launch
 ```
 
 To pilote the drone you can use this documentation frome ardrone autonomy:
