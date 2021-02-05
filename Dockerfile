@@ -38,7 +38,7 @@ RUN apt update && apt install -y vim
 RUN cd src && git clone https://github.com/felixcapuano/tum_simulator.git
 RUN cd src && git clone https://github.com/felixcapuano/ardrone-facetracker.git
 RUN chmod 777 src/ardrone-facetracker/scripts/*
-RUN pip install readchar
+RUN pip install readchar dlib
 
 ###
 RUN sudo apt-get update && sudo apt-get -y upgrade
