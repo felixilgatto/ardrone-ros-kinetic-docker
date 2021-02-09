@@ -2,6 +2,8 @@ version: "3.8"
 services:
   dockerardrone:
     image: ardrone
+    build: .
+    container_name: ros-gazebo-container
     ports:
       - "6080:80"
       - "5556:5556"
