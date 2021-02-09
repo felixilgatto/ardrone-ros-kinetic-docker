@@ -18,7 +18,7 @@ Simply run :
 $ git clone https://github.com/felixcapuano/ardrone-ros-kinetic-docker
 $ cd ./ardrone-ros-kinetic-docker
 $ docker pull dorowu/ubuntu-desktop-lxde-vnc:xenial
-$ docker build .
+$ docker build -t ardrone .
 $ docker-compose up
 ```
 

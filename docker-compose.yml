@@ -1,7 +1,8 @@
-version: "3"
+version: "3.8"
 services:
   dockerardrone:
-    image: docker-ardrone
+    image: ardrone
     ports:
       - "6080:80"
+      - "5556:5556"
   
