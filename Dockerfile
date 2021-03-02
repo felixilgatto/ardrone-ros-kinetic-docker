@@ -31,6 +31,7 @@ RUN /bin/bash -c "echo 'source /opt/ros/kinetic/setup.bash' >> /root/.bashrc && 
 					echo 'source ${CATKIN_WS}/devel/setup.bash' >> /root/.bashrc && \
 					source /root/.bashrc"
 
+#####################
 # Installing Vim Editor
 RUN apt update && apt install -y vim
 
@@ -38,10 +39,13 @@ RUN apt update && apt install -y vim
 RUN cd src && git clone https://github.com/felixcapuano/tum_simulator.git
 RUN cd src && git clone https://github.com/felixcapuano/ardrone-facetracker.git
 RUN chmod 777 src/ardrone-facetracker/scripts/*
-RUN pip install readchar dlib
 
-###
+RUN pip install readchar==2.0.1 dlib==19.21.1
+
+# human model
+COPY ./models/elon/ /root/.gazebo/models/elon/
+#####################
+
+### finning ROS setup
 RUN sudo apt-get update && sudo apt-get -y upgrade
 RUN /bin/bash -c '. /opt/ros/kinetic/setup.bash; cd ${CATKIN_WS}; catkin_make'
-
-COPY ./models/elon/ /root/.gazebo/models/elon/
